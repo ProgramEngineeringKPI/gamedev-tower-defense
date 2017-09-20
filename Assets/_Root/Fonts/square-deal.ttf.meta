@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f7eb5da85956054478ed2b413ba5eb8b
+timeCreated: 1481805388
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: square deal
+  fontNames:
+  - square deal
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

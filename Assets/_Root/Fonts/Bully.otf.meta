@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 338a04d54b19dfd4ca00775959e77875
+timeCreated: 1481805734
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bully
+  fontNames:
+  - Bully
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
