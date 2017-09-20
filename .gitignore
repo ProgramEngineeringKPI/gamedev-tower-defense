@@ -1,0 +1,20 @@
+*.csproj
+*.unityproj
+*.pidb
+*.userprefs
+/Library
+/Temp
+/_ReSharper*
+*.sln*
+*.user
+*.suo
+*.pdb
+*.DS_Store
+*.tmp
+*UnityVS*
+
+/Assembly
+/obj
+/build*
+/Assets/Tema*
+/compilation log.txt

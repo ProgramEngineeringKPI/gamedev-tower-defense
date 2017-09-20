@@ -1,0 +1,13 @@
+* text=auto !eol
+*.jpg -text
+*.fbx -text
+*.tga -text
+*.png -text
+*.dll -text
+*.mat -text
+*.unity text
+*.asset text
+*.cs text
+*.shader text
+*.xml text
+*.prefab text
