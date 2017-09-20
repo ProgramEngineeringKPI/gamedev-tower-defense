@@ -20,6 +20,8 @@
 
         private Transform enemiesParent;
 
+        private static int counter;
+
         [UsedImplicitly]
         public void Start()
         {
@@ -36,7 +38,8 @@
 
         private void Spawn()
         {
-            Instantiate(prefab, transform.position + Vector3.right * Random.Range(-width/2, width/2), Quaternion.identity, enemiesParent);
+            var zombie = Instantiate(prefab, transform.position + Vector3.right * Random.Range(-width/2, width/2), Quaternion.identity, enemiesParent);
+            zombie.name = $"Enemy #{++counter}";
         }
 
         private IEnumerator SpawnSequence()
