@@ -2,13 +2,16 @@
 {
     using System;
     using JetBrains.Annotations;
+
+    using strange.extensions.mediation.impl;
+
     using Stage;
     using UnityEngine;
     using UnityEngine.AI;
 
     [RequireComponent(typeof(NavMeshAgent))]
     [RequireComponent(typeof(Animator))]
-    public class Enemy : MonoBehaviour
+    public class Enemy : View
     {
         private NavMeshAgent agent;
 
@@ -19,8 +22,9 @@
         public event Action<Enemy> Died = delegate { };
 
         [UsedImplicitly]
-        public void Start()
+        protected override void Start()
         {
+            base.Start();
             agent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
             agent.destination = FindObjectOfType<Home>().transform.position;
