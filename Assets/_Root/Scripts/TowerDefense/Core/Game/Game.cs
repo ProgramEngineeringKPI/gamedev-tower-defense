@@ -23,6 +23,8 @@
         [Inject]
         public PlayerLost PlayerLost { get; set; }
 
+        private bool gameEnded;
+
         public int Coins
         {
             get
@@ -67,9 +69,9 @@
         private void OnEnemyPassedBy(Enemy enemy)
         {
             Lives = Math.Max(0, Lives - 1);
-            if (Lives == 0)
+            if (Lives == 0 && !gameEnded)
             {
-                Debug.Log($"Player lost....");
+                gameEnded = true;
                 PlayerLost.Dispatch();
             }
         }

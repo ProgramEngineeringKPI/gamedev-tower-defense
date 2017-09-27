@@ -7,6 +7,9 @@
     public class EnemyDied : Signal<Enemy>{}
 
     [Implements]
+    public class EnemyBorn : Signal<Enemy> { }
+
+    [Implements]
     public class EnemyPassedBy : Signal<Enemy> { }
 
     [Implements]
