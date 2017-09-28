@@ -41,7 +41,32 @@
 
         public event Action<Enemy> Died = delegate { };
 
-        public Vector3? Anchor => popUpAnchor.position;
+        public event Action<Enemy> HealthUpdated = delegate { };
+
+        public Vector3? Anchor => popUpAnchor?.position;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                health = Mathf.Max(0, value);
+                HealthUpdated(this);
+                if (health == 0)
+                {
+                    animator.SetTrigger("Die");
+                    Died(this);
+
+                    EnemyDied.Dispatch(this);
+
+                    Destroy(gameObject.GetComponent<Collider>());
+                    agent.isStopped = true;
+                }
+            }
+        }
 
         public EnemyHealthPopUp PopUpPrefab => popUpPrefab;
 
@@ -63,17 +88,9 @@
                 //already dead;
                 return;
             }
-            health = Mathf.Max(0, health - damage);
-            if (health == 0)
-            {
-                animator.SetTrigger("Die");
-                Died(this);
 
-                EnemyDied.Dispatch(this);
-
-                Destroy(gameObject.GetComponent<Collider>());
-                agent.isStopped = true;
-            }
+            Health -= damage;
+            
         }
 
         
