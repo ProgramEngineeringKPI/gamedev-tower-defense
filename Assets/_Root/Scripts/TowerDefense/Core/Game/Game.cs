@@ -66,6 +66,16 @@
             Lives = parameters.Lives;
         }
 
+        public bool TrySpendCoins(int amount)
+        {
+            if (Coins < amount)
+            {
+                return false;
+            }
+            Coins -= amount;
+            return true;
+        }
+
         private void OnEnemyPassedBy(Enemy enemy)
         {
             Lives = Math.Max(0, Lives - 1);

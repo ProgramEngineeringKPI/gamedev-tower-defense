@@ -2659,6 +2659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40a1c97bc328bf42a9d12d19ca9de45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 50
   radius: 28.4
 --- !u!135 &135087477816763330
 SphereCollider:

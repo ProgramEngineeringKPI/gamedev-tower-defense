@@ -10,12 +10,17 @@
     [RequireComponent(typeof(SphereCollider))]
     public class Tower : MonoBehaviour
     {
+        [EditorAssigned, SerializeField]
+        private int price;           
+
         [SerializeField, EditorAssigned, Range(2, 40)]
         private float radius = 30;
 
         private new SphereCollider collider;
 
         private readonly List<Enemy> enemies = new List<Enemy>();
+
+        public int Price => price;
 
         private Shooter shooter;
 
